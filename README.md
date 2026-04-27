@@ -138,6 +138,10 @@ solution = bias_coverage_mitigation_ilp(
 # solution: {group_label_tuple: delta} where delta > 0 means additions, delta < 0 means deletions
 ```
 
+## Contact
+
+For questions or feedback, please contact Bruno Scarone at scarone.b@northeastern.edu.
+
 ## Citation
 
 ```bibtex
