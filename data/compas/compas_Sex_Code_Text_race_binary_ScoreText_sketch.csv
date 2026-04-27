@@ -1,0 +1,13 @@
+Sex_Code_Text,race_binary,ScoreText,count
+Male,0,Low,12202
+Male,0,High,1273
+Male,0,Medium,2862
+Male,1,Low,19489
+Male,1,High,4510
+Male,1,Medium,7143
+Female,0,Low,4159
+Female,0,High,375
+Female,0,Medium,894
+Female,1,Low,5637
+Female,1,High,665
+Female,1,Medium,1589

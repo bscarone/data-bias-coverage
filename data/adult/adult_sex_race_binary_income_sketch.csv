@@ -1,0 +1,9 @@
+sex,race_binary,income,count
+Male,1,<=50K,19670
+Male,1,>50K,9065
+Male,0,<=50K,3062
+Male,0,>50K,853
+Female,1,<=50K,11485
+Female,1,>50K,1542
+Female,0,<=50K,2938
+Female,0,>50K,227
