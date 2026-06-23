@@ -6,13 +6,13 @@ Code for the FAccT 2026 paper:
 
 ## Overview
 
-We extend the bias mitigation framework of [Scarone et al. (AIES 2025)](https://ojs.aaai.org/index.php/AIES/article/view/36712) to incorporate **coverage constraints** that enforce sufficient representation across intersectional demographic groups. The framework:
+We extend the bias mitigation framework of [Scarone et al. (AIES 2025)](https://ojs.aaai.org/index.php/AIES/article/view/36712) to incorporate **coverage constraints** that enforce sufficient representation across intersectional demographic groups. Specifically, in this work we:
 
-- Characterizes all exact solutions to the bias mitigation problem and derives tight approximation error bounds
-- Derives sample complexity bounds (via Serfling's inequality) for estimating external source distributions
-- Formulates bias mitigation as an **integer linear program (ILP)** that finds globally optimal solutions for any fairness tolerance ε
-- Characterizes the **price of fairness**: the minimum data modification cost as a function of fairness tolerance
-- Empirically demonstrates that bias mitigation via the ILP preserves predictive accuracy across multiple classifiers
+- Characterize all exact mitigation solutions, design an algorithm that computes coverage-satisfying, data-efficient approximate solutions, and establish tight theoretical bounds on the approximation errors
+- Derive sample complexity bounds (via Serfling's inequality) for estimating external source distributions
+- Formulate bias mitigation as an **integer linear program (ILP)** that finds globally optimal solutions for any fairness tolerance
+- Characterize the **price of fairness**: the minimum data modification cost as a function of fairness tolerance
+- Empirically demonstrate that bias mitigation via the ILP preserves predictive accuracy across multiple classifiers
 
 ## Requirements
 
@@ -20,7 +20,7 @@ We extend the bias mitigation framework of [Scarone et al. (AIES 2025)](https://
 - [Gurobi](https://www.gurobi.com/) (with a valid license — free academic licenses are available)
 - See `requirements.txt` for Python dependencies
 
-Install dependencies:
+To install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -51,8 +51,8 @@ python download_datasets.py
 │   └── default_credit/
 ├── bias_coverage_ilp.py         # Core ILP formulation (Section 5)
 ├── bias_coverage_utils.py       # Group/coverage utility functions
-├── bias_closed_form.py          # Closed-form mitigation algorithm (Section 4)
-├── bias_closed_form_solution.py
+├── bias_closed_form.py          # Uniform Bias computation and helper functions
+├── bias_closed_form_solution.py # Exact and approximate closed-form mitigation solutions (Section 4)
 ├── sample_complexity_bounds.py  # Serfling/Hoeffding sample size bounds (Section 4.4)
 ├── dataframe_sketches.py        # Contingency table sketch operations
 ├── config_datasets.py           # Dataset and sketch configurations
